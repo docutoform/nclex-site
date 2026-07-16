@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+.ub230c { display: var(--display); --display: flex; width: 100%; z-index: var(--above-all-z-index); box-sizing: border-box; background-color: rgb(255, 255, 255); justify-content: center; position: fixed; top: 0px; box-shadow: rgba(164, 168, 192, 0.2) 0px 2px 12px; }
+
+.ub230c.iF3M3J { direction: rtl; }
+
+.ub230c.aD8jGL { direction: ltr; }
+
+.ub230c.CjFky3 { background-color: red; border-width: medium; border-style: none; border-color: currentcolor; border-image: none; }
+
+.ub230c > .ak8WKZ { justify-content: center; align-items: center; width: 100%; display: flex; }
+
+.ub230c > .ak8WKZ > .vY4Tm1 { color: rgb(0, 0, 0); flex-shrink: 0; align-items: center; display: flex; }
+
+.ub230c > .ak8WKZ:hover > .vY4Tm1 { color: rgb(51, 56, 80); }
+
+.bcTg04 { text-align: center; --color: #000; letter-spacing: 0px; background-color: rgb(255, 255, 255); column-gap: 4px; width: 100%; padding-block: 8px; font-family: "Wix Madefor Text", Madefor, sans-serif; font-size: 14px; font-weight: 400; line-height: 18px; position: absolute; top: 0px; left: 0px; }
+
+.bcTg04:hover { --color: #00e; }
+
+.yxZj1H { z-index: var(--above-all-z-index); background-color: rgb(255, 255, 255); height: 34px; position: fixed; top: 0px; }
+
+.HMMJm5 { column-gap: 4px; color: var(--color) !important; }
+
+.vjUrmX { padding-block-start: 3px; }

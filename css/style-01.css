@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+.blockSiteScrolling, .siteScrollingBlocked { position: fixed; width: 100%; }
+
+.siteScrollingBlockedIOSFix { overflow: hidden !important; }
+
+.blockSiteScrolling #SITE_CONTAINER { margin-top: calc(var(--blocked-site-scroll-margin-top) * -1); }

@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+@keyframes slide-horizontal-new { 
+  0% { transform: translate(100%); }
+}
+
+@keyframes slide-horizontal-old { 
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translate(-100%); }
+}
+
+@keyframes slide-vertical-new { 
+  0% { transform: translateY(-100%); }
+}
+
+@keyframes slide-vertical-old { 
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(100%); }
+}
+
+@keyframes out-in-new { 
+  0% { opacity: 0; }
+}
+
+@keyframes out-in-old { 
+  100% { opacity: 0; }
+}
+
+:root:active-view-transition { view-transition-name: none; }
+
+:root:active-view-transition::view-transition-group(*) { animation: auto ease 0s 1 normal none running none; }
+
+:root:active-view-transition::view-transition-old(*) { animation: auto ease 0s 1 normal none running none; }
+
+:root:active-view-transition::view-transition-new(*) { animation: auto ease 0s 1 normal none running none; }
+
+:root::view-transition { pointer-events: none; }
+
+:root:active-view-transition #SITE_HEADER { view-transition-name: header-group; }
+
+:root:active-view-transition #WIX_ADS { view-transition-name: wix-ads-group; }
+
+:root:active-view-transition #SITE_FOOTER { view-transition-name: footer-group; }
+
+:root:active-view-transition #BACKGROUND_GROUP_TRANSITION_GROUP > div { view-transition-name: background-group; }
+
+:root:active-view-transition::view-transition-group(page-group) { pointer-events: all; cursor: wait; animation-timing-function: revert; animation-delay: revert; animation-iteration-count: revert; animation-direction: revert; animation-fill-mode: revert; animation-play-state: revert; animation-name: revert; animation-timeline: revert; animation-range: revert; animation-duration: 0.6s; }
+
+:root:active-view-transition::view-transition-old(page-group) { pointer-events: all; cursor: wait; animation-timing-function: revert; animation-delay: revert; animation-iteration-count: revert; animation-direction: revert; animation-fill-mode: revert; animation-play-state: revert; animation-name: revert; animation-timeline: revert; animation-range: revert; animation-duration: 0.6s; }
+
+:root:active-view-transition::view-transition-new(page-group) { pointer-events: all; cursor: wait; animation-timing-function: revert; animation-delay: revert; animation-iteration-count: revert; animation-direction: revert; animation-fill-mode: revert; animation-play-state: revert; animation-name: revert; animation-timeline: revert; animation-range: revert; animation-duration: 0.6s; }
+
+:root:active-view-transition-type(SlideHorizontal)::view-transition-old(page-group) { mix-blend-mode: normal; animation: 0.6s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards running slide-horizontal-old; }
+
+:root:active-view-transition-type(SlideHorizontal)::view-transition-new(page-group) { mix-blend-mode: normal; animation: 0.6s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal backwards running slide-horizontal-new; }
+
+:root:active-view-transition-type(SlideVertical)::view-transition-old(page-group) { mix-blend-mode: normal; animation: 0.6s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal forwards running slide-vertical-old; }
+
+:root:active-view-transition-type(SlideVertical)::view-transition-new(page-group) { mix-blend-mode: normal; animation: 0.6s cubic-bezier(0.83, 0, 0.17, 1) 0s 1 normal backwards running slide-vertical-new; }
+
+:root:active-view-transition-type(OutIn)::view-transition-old(page-group) { animation: 0.35s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 normal forwards running out-in-old; }
+
+:root:active-view-transition-type(OutIn)::view-transition-new(page-group) { animation: 0.35s cubic-bezier(0.64, 0, 0.78, 0) 0.35s 1 normal backwards running out-in-new; }
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*) { animation: auto ease 0s 1 normal none running none !important; }
+  ::view-transition-old(*) { animation: auto ease 0s 1 normal none running none !important; }
+  ::view-transition-new(*) { animation: auto ease 0s 1 normal none running none !important; }
+}
+
+html, body { vertical-align: baseline; background: 0px 0px; border: 0px; outline: 0px; margin: 0px; padding: 0px; }
+
+body { --scrollbar-width: 0px; text-size-adjust: 100%; font-family: Arial, Helvetica, sans-serif; font-size: 10px; }
+
+html, body { height: 100%; }
+
+body { overflow: auto scroll; }
+
+body:not(.responsive) #site-root { width: 100%; min-width: var(--site-width); }
+
+body:not([data-js-loaded]) [data-hide-prejs] { visibility: hidden; }
+
+interact-element { display: contents; }
+
+#SITE_CONTAINER { position: relative; }
+
+:root { --one-unit: 1vw; --section-max-width: 9999px; --spx-stopper-max: 9999px; --spx-stopper-min: 0px; --browser-zoom: 1; }
+
+@supports ((-webkit-appearance:none)) and (stroke-color:transparent) {
+  :root { --safari-sticky-fix: opacity; --experimental-safari-sticky-fix: translateZ(0); }
+}
+
+@supports (container-type:inline-size) {
+  :root { --one-unit: 1cqw; }
+}
+
+[id^="oldHoverBox-"] { mix-blend-mode: plus-lighter; transition: opacity 0.5s, visibility 0.5s; }
+
+[data-mesh-id$="inlineContent-gridContainer"]:has(> [id^="oldHoverBox-"]) { isolation: isolate; }

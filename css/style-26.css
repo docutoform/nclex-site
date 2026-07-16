@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+@media (forced-colors: active) {
+  #SITE_CONTAINER.focus-ring-active :not(.has-custom-focus):not(.ignore-focus):not([tabindex="-1"]):focus, #SITE_CONTAINER.focus-ring-active :not(.has-custom-focus):not(.ignore-focus):not([tabindex="-1"]):focus ~ .wixSdkShowFocusOnSibling { outline: canvastext solid 2px; outline-offset: 2px; }
+}

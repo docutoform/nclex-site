@@ -1,0 +1,5 @@
+@charset "utf-8";
+
+.BqYkvS { pointer-events: none; z-index: 9999; color: rgb(17, 109, 255); opacity: 0; cursor: pointer; background: rgb(255, 255, 255); border-radius: 24px; width: 0px; height: 0px; margin-left: -94px; padding: 0px 24px; font-family: Helvetica, Arial, メイリオ, meiryo, "ヒラギノ角ゴ pro w3", "hiragino kaku gothic pro", sans-serif; font-size: 14px; position: absolute; top: 60px; left: 50%; }
+
+.BqYkvS:focus { opacity: 1; pointer-events: auto; border: 2px solid; width: auto; height: 40px; }
