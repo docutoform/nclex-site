@@ -56,3 +56,36 @@ select.sjImZoO {
   box-shadow: 0 0 0 1000px #ffffff inset !important;
   -webkit-text-fill-color: rgb(0, 51, 102) !important;
 }
+
+/* ─── Animaciones mejoradas ─────────────────────────────────────────────── */
+.reveal-on-scroll {
+  opacity: 0;
+  /* Aumentado de 0.7s a 1s para una animación más fluida y natural */
+  transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform: translateY(30px);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ─── Botón del formulario ──────────────────────────────────────────────── */
+/* Reduce el ancho del botón para que no occupe todo el ancho */
+#nclex-contact-submit,
+.comp-mokeala6_ooi button,
+.comp-mokeala6_ooi [role="button"] {
+  max-width: 300px !important;
+  width: auto !important;
+  padding: 12px 32px !important;
+}
