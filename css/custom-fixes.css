@@ -1,0 +1,38 @@
+/* ============================================================
+   Correcciones manuales post-migración de Wix
+   ============================================================ */
+
+/* 1) Elimina la franja en blanco en la parte superior.
+   Wix reservaba ese espacio para su banner "Creado con Wix"
+   (variable --wix-ads-height), que ya quitamos del HTML pero
+   la reserva de espacio seguía activa. */
+#site-root {
+  top: 0 !important;
+}
+
+/* 2) Campos del formulario de contacto: antes eran del mismo
+   color que el fondo de la página y no se distinguían. */
+#form-95fdd129-0006-4a25-9c1f-fd606dde2f1f .s__72lfJk,
+#form-95fdd129-0006-4a25-9c1f-fd606dde2f1f .sUs3fhJ {
+  background-color: #ffffff !important;
+  border: 1.5px solid rgba(0, 51, 102, 0.25) !important;
+  border-radius: 6px !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+#form-95fdd129-0006-4a25-9c1f-fd606dde2f1f .s__72lfJk:focus-within,
+#form-95fdd129-0006-4a25-9c1f-fd606dde2f1f .sUs3fhJ:focus-within {
+  border-color: rgb(255, 107, 53) !important;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15);
+}
+
+/* 3) Botón "Solicitar información": antes ocupaba todo el ancho
+   del formulario. Lo dejamos compacto y alineado a la izquierda. */
+#form-95fdd129-0006-4a25-9c1f-fd606dde2f1f [data-hook="form-field-0fa4c42a-c159-4c44-33f4-ba9ac53cd6e4"] {
+  display: flex;
+  justify-content: flex-start;
+}
+#nclex-contact-submit {
+  width: auto !important;
+  min-width: 200px;
+  flex: 0 0 auto !important;
+}
